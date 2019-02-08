@@ -15,10 +15,6 @@ public class Dollar extends Money
     @Override
     public String toString()
     {
-        return "Dollar{" +
-                "name='" + name + '\'' +
-                ", value=" + value +
-                ", quantity=" + quantity +
-                '}';
+        return quantity + " " + name;
     }
 }
