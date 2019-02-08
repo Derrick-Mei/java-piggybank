@@ -2,18 +2,18 @@ package com.dkm;
 
 abstract class Money
 {
-    String name;
-    double value;
+    final String name;
+    final double value;
     int quantity = 1;
 
-    public Money(String name, double value, int quantity)
+    Money(String name, double value, int quantity)
     {
         this.name = name;
         this.value = value;
         this.quantity = quantity;
     }
 
-    public Money(String name, double value)
+    Money(String name, double value)
     {
         this.name = name;
         this.value = value;
@@ -24,6 +24,7 @@ abstract class Money
         return quantity * value;
     }
 
+    // If Dollar return $1, else if quantity > 1 return plural else return normal
     String getString()
     {
         if (name.equalsIgnoreCase("$"))
@@ -32,7 +33,18 @@ abstract class Money
         }
         else
         {
+            if (quantity > 1)
+            {
+                if (name == "Penny")
+                {
+                    return quantity + " Pennies";
+                }
+                return quantity + " " + name + "s";
+            }
+            else
+            {
             return quantity + " " + name;
+            }
         }
     }
 }

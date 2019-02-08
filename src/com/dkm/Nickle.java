@@ -1,6 +1,6 @@
 package com.dkm;
 
-public class Nickle extends Money
+class Nickle extends Money
 {
     public Nickle(int quantity)
     {
