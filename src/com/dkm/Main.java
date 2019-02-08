@@ -1,5 +1,6 @@
 package com.dkm;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 class Main {
@@ -20,7 +21,9 @@ class Main {
 
         double total = piggyBank.stream().mapToDouble(Money::getValue).sum();
 
-        System.out.println("The piggy bank holds $" + total);
+        DecimalFormat df = new DecimalFormat("#,###,##0.00");
+
+        System.out.println("The piggy bank holds $" + df.format(total));
 
     }
 }
