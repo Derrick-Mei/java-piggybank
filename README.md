@@ -32,3 +32,13 @@ The main program will look something like this pseudocode (remember pseudocode i
   * on the console should appear  
     `The piggy bank holds $7.3`  
   * Note: do not worry about the format of the 7.2 Either 7.2 or 7.20 would be correct. Also notice that we are not concerned with adding the S for plurals with our names of our coins.
+
+1. create classes for the money
+    1. each money class needs to inherit from a interface or abstract class so that arraylist can hold all types of money
+    3. interface/abstract class needs methods getString() and getValue
+    4. money classes need fields name and quantity = 0
+    
+2. Create piggyBank
+    1. Order matters so either array or ArrayList
+    2. piggyBank needs unlimited space so we need ArrayList and it has more built in methods
+    
